@@ -5032,7 +5032,7 @@ GameObject:
   - component: {fileID: 1125344713}
   - component: {fileID: 1125344712}
   m_Layer: 0
-  m_Name: "\u5730\u4E0A"
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15761,7 +15761,7 @@ GameObject:
   - component: {fileID: 1659320536}
   - component: {fileID: 1659320535}
   m_Layer: 0
-  m_Name: "\u754C\u9650"
+  m_Name: Boundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19503,7 +19503,7 @@ GameObject:
   - component: {fileID: 1885622231}
   - component: {fileID: 1885622230}
   m_Layer: 0
-  m_Name: platform
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
