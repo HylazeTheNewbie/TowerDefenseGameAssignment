@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Background
+  - 
   - 
   - 
   - 
@@ -40,16 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: "\u5730\u4E0A"
-    uniqueID: 823505147
-    locked: 0
-  - name: path
-    uniqueID: 385956853
-    locked: 0
-  - name: "\u754C\u9650"
-    uniqueID: 521772793
-    locked: 0
-  - name: platform
-    uniqueID: 3787848131
     locked: 0

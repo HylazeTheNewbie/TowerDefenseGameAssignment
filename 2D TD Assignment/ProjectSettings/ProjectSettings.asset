@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 2499e8200aed38e47a24ebfbd39c45d2
+  productGUID: 6a2adf215fad04e4c96ee669e8e322e6
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: 2D-TD-Assignment
+  productName: unity assignment
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -595,14 +595,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: 2D-TD-Assignment
+  metroPackageName: unity assignment
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: 2D-TD-Assignment
+  metroApplicationDescription: unity assignment
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -671,11 +671,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 8d05f0b6-76e8-4599-9097-9e826c9cce6b
+  cloudProjectId: a7252c86-243d-4d77-bf7a-7c41b891a42c
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 2D-TD-Assignment
-  organizationId: chin-man-hin
+  projectName: TowerDefenseGameAssignment
+  organizationId: jiaye_hhh
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
