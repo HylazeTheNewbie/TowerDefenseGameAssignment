@@ -50,6 +50,12 @@ TagManager:
   - name: "\u754C\u9650"
     uniqueID: 521772793
     locked: 0
+  - name: After Icone
+    uniqueID: 3994099631
+    locked: 0
   - name: platform
     uniqueID: 3787848131
+    locked: 0
+  - name: main icon
+    uniqueID: 3707572787
     locked: 0
