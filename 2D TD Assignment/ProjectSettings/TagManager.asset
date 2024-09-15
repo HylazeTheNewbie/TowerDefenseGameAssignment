@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Path1
+  - Path2
   layers:
   - Default
   - TransparentFX
@@ -58,4 +60,7 @@ TagManager:
     locked: 0
   - name: main icon
     uniqueID: 3707572787
+    locked: 0
+  - name: Entity
+    uniqueID: 3503335053
     locked: 0

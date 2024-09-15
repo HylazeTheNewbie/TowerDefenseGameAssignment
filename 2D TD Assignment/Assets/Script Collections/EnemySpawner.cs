@@ -32,6 +32,7 @@ public class EnemySpawner : MonoBehaviour
     {
         onEnemyDestroyed.AddListener(EnemyDestroyed);
     }
+
     private IEnumerator StartWave()
     {
         yield return new WaitForSeconds(timeBetweenWaves);
@@ -41,7 +42,7 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
-        if (!isSpawning) return; 
+        if (!isSpawning) return;
 
         timeSinceLastSpawn += Time.deltaTime;
 
@@ -69,12 +70,18 @@ public class EnemySpawner : MonoBehaviour
         currentWave++;
         StartCoroutine(StartWave());
     }
+
     private void SpawnEnemy()
     {
-        GameObject prefabToSpawn = enemyPrefabs[0];
-        Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
-        Debug.Log("Spawn Enemy");
+        GameObject enemy = EnemyPool.enemyPool.GetPooledEnemy();
+        if (enemy != null)
+        {
+            enemy.transform.position = LevelManager.main.startPoint.position;
+            enemy.SetActive(true);  // Activate the enemy
+            Debug.Log("Spawned Enemy from Pool");
+        }
     }
+
     private int EnemiesPerWave()
     {
         return Mathf.RoundToInt(baseEnemiesEquilvalent * Mathf.Pow(currentWave, difficultyScalingFactor));

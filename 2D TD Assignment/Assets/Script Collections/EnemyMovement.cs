@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -29,9 +28,9 @@ public class EnemyMovement : MonoBehaviour
         }
 
         target = path[targetIndex];
-        Debug.Log("Path Count : " +  path.Count);
+        Debug.Log("Path Count : " + path.Count);
     }
-    
+
     private void MoveEnemy()
     {
         // Move towards the target
@@ -52,9 +51,10 @@ public class EnemyMovement : MonoBehaviour
 
             if (targetIndex >= path.Count)
             {
-                // If reached the end of the path, stop moving
-                EnemySpawner.onEnemyDestroyed.Invoke();
-                Destroy(gameObject);
+                // If reached the end of the path, return enemy to the pool instead of destroying
+                EnemySpawner.onEnemyDestroyed.Invoke(); // Optional: update any UI or state tracking               
+                ReturnToPool(); // Return the enemy to the pool instead of destroying it
+                ResetEnemyPosition();
                 return;
             }
             else
@@ -63,9 +63,23 @@ public class EnemyMovement : MonoBehaviour
             }
         }
     }
+
+    private void ReturnToPool()
+    {
+        // Deactivate enemy and return to the pool
+        rb.velocity = Vector2.zero; // Stop movement before returning to pool
+        EnemyPool.enemyPool.ReturnEnemyToPool(gameObject); // Return to pool
+    }
+
     void FixedUpdate()
     {
         MoveEnemy();
         TargetChecking();
+    }
+
+    private void ResetEnemyPosition()
+    {
+        targetIndex = 0;
+        target = path[targetIndex];
     }
 }
