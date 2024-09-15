@@ -612,6 +612,7 @@ GameObject:
   - component: {fileID: 329566005}
   - component: {fileID: 329566003}
   - component: {fileID: 329566007}
+  - component: {fileID: 329566008}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -706,6 +707,18 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
+--- !u!114 &329566008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329566002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35dd44f5d532b184c8942e0695fa8a18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &364487225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,10 +1494,10 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1140270224}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8920291457c7ab34aa5a0fa4ee6a8604, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a9af626b142a7f64191351e82236ff7a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
