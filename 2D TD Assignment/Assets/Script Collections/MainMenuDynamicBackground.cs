@@ -25,7 +25,6 @@ public class MainMenuDynamicBackground : MonoBehaviour
         imageResolution = getBGImagePos();
         horizontalBoundary = 0.3f + ((imageResolution.x - cameraResolution.x) / 128);
         startPositionX = transform.position;
-        Debug.Log("Position of x : " + startPositionX.x);
     }
 
     // Update is called once per frame
@@ -37,7 +36,6 @@ public class MainMenuDynamicBackground : MonoBehaviour
     Vector2 getCameraPos()
     {
         cameraResolution = new Vector2(Camera.main.pixelWidth, Camera.main.pixelHeight);
-        Debug.Log(Camera.main.pixelWidth + ", " + Camera.main.pixelHeight);
 
         return cameraResolution;
     }
@@ -49,7 +47,6 @@ public class MainMenuDynamicBackground : MonoBehaviour
         if (image.sprite != null && image.sprite.texture != null)
         {
             imageResolution = new Vector2(rectTransform.sizeDelta.x, rectTransform.sizeDelta.y);
-            Debug.Log(rectTransform.sizeDelta.x + ", " + rectTransform.sizeDelta.y);
         }
         else
             Debug.Log("Image or texture is missing!");
@@ -70,9 +67,7 @@ public class MainMenuDynamicBackground : MonoBehaviour
 
         // Update distance moved
         distanceMoved = transform.position.x - startPositionX.x;
-        Debug.Log("Distance Moved : " + distanceMoved);
-        Debug.Log("Current Position of x : " + transform.position.x);
-
+ 
         // Change direction if boundaries are reached
         if (distanceMoved >= horizontalBoundary)
             movingRight = false;
