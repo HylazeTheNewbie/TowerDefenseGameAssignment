@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -30,8 +31,18 @@ public class EnemyMovement : MonoBehaviour
         target = path[targetIndex];
         Debug.Log("Path Count : " +  path.Count);
     }
+    
+    private void MoveEnemy()
+    {
+        // Move towards the target
+        Vector2 direction = (target.position - transform.position).normalized;
+        Vector2 newVelocity = direction * moveSpeed;
 
-    void Update()
+        if (rb.velocity != newVelocity)
+            rb.velocity = newVelocity;
+    }
+
+    private void TargetChecking()
     {
         // Check if the enemy has reached the target
         float distance = Vector2.Distance(transform.position, target.position);
@@ -52,11 +63,9 @@ public class EnemyMovement : MonoBehaviour
             }
         }
     }
-
     void FixedUpdate()
     {
-        // Move towards the target
-        Vector2 direction = (target.position - transform.position).normalized;
-        rb.velocity = direction * moveSpeed;
+        MoveEnemy();
+        TargetChecking();
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class MainMenuDynamicBackground : MonoBehaviour
 {
+    
     [SerializeField] private float speed = 1.5f;
     private RectTransform rectTransform;
     private Vector2 imageResolution;

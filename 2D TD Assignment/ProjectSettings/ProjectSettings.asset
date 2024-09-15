@@ -671,11 +671,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: a7252c86-243d-4d77-bf7a-7c41b891a42c
+  cloudProjectId: 83dc5b4b-dd42-4a67-a9b8-c8507d294a48
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: TowerDefenseGameAssignment
-  organizationId: jiaye_hhh
+  projectName: 2D TD Assignment
+  organizationId: chin-man-hin
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

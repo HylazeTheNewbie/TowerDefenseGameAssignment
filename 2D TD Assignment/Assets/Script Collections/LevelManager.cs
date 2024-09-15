@@ -15,8 +15,10 @@ public class LevelManager : MonoBehaviour
         main = this;
 
         // Find and store paths in a straightforward manner
-        GameObject[] path1Objects = GameObject.FindGameObjectsWithTag("Path1");
-        GameObject[] path2Objects = GameObject.FindGameObjectsWithTag("Path2");
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Path1"))
+            path1.Add(obj.transform);
+        foreach(GameObject obj in GameObject.FindGameObjectsWithTag("Path2"))
+            path2.Add(obj.transform);
     }
 
     public List<Transform> GetPathByTag(string tag)
