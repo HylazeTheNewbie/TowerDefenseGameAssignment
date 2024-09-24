@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+//using UnityEngine.UI;
+//using UnityEngine.Audio;
 
 
 public class MainMenuSceneManager : MonoBehaviour
@@ -9,6 +11,13 @@ public class MainMenuSceneManager : MonoBehaviour
 
     public AudioClip buttonHItSound;
     static AudioSource audioSrc;
+    //public Slider volumeSlider;                   // need to done this after the map is complete
+    //public AudioMixer mixer;
+
+    //public void setVolume()
+    //{
+    //    mixer.SetFloat("VolumeMainMenu", volumeSlider.value);
+    //}
 
     // Start is called before the first frame update
     void Start()
