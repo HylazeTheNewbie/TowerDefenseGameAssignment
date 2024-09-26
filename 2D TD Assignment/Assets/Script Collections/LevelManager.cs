@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
     public List<Transform> path1;
     public List<Transform> path2;
 
+
     private void Awake()
     {
         main = this;

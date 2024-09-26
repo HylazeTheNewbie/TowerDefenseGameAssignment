@@ -836,6 +836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 8479775091163346667}
+  buttonHitSound: {fileID: 8300000, guid: 087f67ed5303f81429a68f0c8d757927, type: 3}
 --- !u!1 &8709174937493470844
 GameObject:
   m_ObjectHideFlags: 0
