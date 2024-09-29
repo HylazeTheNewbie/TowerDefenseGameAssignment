@@ -10,13 +10,14 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene(int levelIndex)
     {
-        StartCoroutine(LoadSceneAsynchronously(levelIndex));    
+        loadingScreen.SetActive(true);
+        StartCoroutine(LoadSceneAsynchronously(levelIndex));    // wait
     }
 
     IEnumerator LoadSceneAsynchronously(int levelIndex)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(levelIndex);
-        loadingScreen.SetActive(true);
+
         while (!operation.isDone)
         {
             loadingBar.value = operation.progress;

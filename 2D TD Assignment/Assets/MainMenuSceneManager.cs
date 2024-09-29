@@ -55,14 +55,6 @@ public class MainMenuSceneManager : MonoBehaviour
         audioSrc.PlayOneShot(buttonHItSound);
     }
 
-    public void loadGame()
-    {
-        StartCoroutine(Wait());
-
-        // play the button hit sound 
-        audioSrc.PlayOneShot(buttonHItSound);
-    }
-
     public void setting()
     {
         StartCoroutine(Wait());

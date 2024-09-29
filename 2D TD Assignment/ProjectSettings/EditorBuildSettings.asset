@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CampaignLev2.unity
     guid: db47e13c6353fb7468f8cf3ba6a0cd47
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HomeScreen.unity
     guid: d1b98122cb954274b8d603f7fcc6296f
   - enabled: 1
