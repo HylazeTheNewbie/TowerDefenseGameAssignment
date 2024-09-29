@@ -34,7 +34,7 @@ public class MainMenuSceneManager : MonoBehaviour
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(1); // wait for 2 seconds
+        yield return new WaitForSeconds(3); // wait for 2 seconds
         SceneManager.LoadScene("HomeScreen");  // Go to the "HomeScreen" game scene
 
     }
