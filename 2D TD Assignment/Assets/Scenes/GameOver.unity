@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 376956134}
   - component: {fileID: 376956133}
   - component: {fileID: 376956132}
+  - component: {fileID: 376956135}
   m_Layer: 5
   m_Name: Home
   m_TagString: Untagged
@@ -338,9 +339,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1706565030}
-        m_TargetAssemblyTypeName: GameOverMenu, Assembly-CSharp
-        m_MethodName: Home
+      - m_Target: {fileID: 376956135}
+        m_TargetAssemblyTypeName: RestartController, Assembly-CSharp
+        m_MethodName: BackToHome
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -370,7 +371,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5c328c8898b4b0745af6f4837cff5d91, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3495b2700225c3143a534128e75589f7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -388,6 +389,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 376956130}
   m_CullTransparentMesh: 1
+--- !u!114 &376956135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376956130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8261867839f518441be9691fb94fac10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &926002831
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +910,7 @@ GameObject:
   - component: {fileID: 2051115225}
   - component: {fileID: 2051115224}
   - component: {fileID: 2051115223}
+  - component: {fileID: 2051115226}
   m_Layer: 5
   m_Name: Replay
   m_TagString: Untagged
@@ -921,7 +935,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -130, y: -144}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 65, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2051115223
 MonoBehaviour:
@@ -967,9 +981,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1706565030}
-        m_TargetAssemblyTypeName: GameOverMenu, Assembly-CSharp
-        m_MethodName: Restart
+      - m_Target: {fileID: 2051115226}
+        m_TargetAssemblyTypeName: RestartController, Assembly-CSharp
+        m_MethodName: ResetGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -999,7 +1013,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a0341e4e8412ea14bb1a14b32b05da48, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5eba0ba63f6817448ad41af33d1a1c6f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1017,6 +1031,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051115221}
   m_CullTransparentMesh: 1
+--- !u!114 &2051115226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051115221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8261867839f518441be9691fb94fac10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
