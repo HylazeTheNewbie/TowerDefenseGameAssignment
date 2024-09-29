@@ -9,4 +9,10 @@ public class HomeScreenEvent : MonoBehaviour
         SceneManager.LoadScene(index);
 
     }
+
+
+    public void BackToHome()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
