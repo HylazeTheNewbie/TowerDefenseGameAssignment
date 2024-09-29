@@ -35,7 +35,7 @@ public class MainMenuSceneManager : MonoBehaviour
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(3); // wait for 2 seconds
-        SceneManager.LoadScene("CampaihnLev1");  // Go to the "HomeScreen" game scene
+        SceneManager.LoadScene("CampaignLev1");  // Go to the "HomeScreen" game scene
 
     }
 
