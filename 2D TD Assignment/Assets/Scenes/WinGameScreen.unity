@@ -265,6 +265,7 @@ GameObject:
   - component: {fileID: 158886545}
   - component: {fileID: 158886548}
   - component: {fileID: 158886544}
+  - component: {fileID: 158886549}
   m_Layer: 5
   m_Name: NextLev
   m_TagString: Untagged
@@ -411,6 +412,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HoverItem: {fileID: 2047168727}
+--- !u!95 &158886549
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158886542}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f57ea06853049a49b2a2779163225a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &294772182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,6 +1105,7 @@ GameObject:
   - component: {fileID: 749681029}
   - component: {fileID: 749681028}
   - component: {fileID: 749681030}
+  - component: {fileID: 749681031}
   m_Layer: 5
   m_Name: Home
   m_TagString: Untagged
@@ -1281,6 +1304,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &749681031
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749681023}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f57ea06853049a49b2a2779163225a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &880367583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,6 +1468,7 @@ GameObject:
   - component: {fileID: 914590954}
   - component: {fileID: 914590958}
   - component: {fileID: 914590957}
+  - component: {fileID: 914590959}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -1570,6 +1615,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HoverItem: {fileID: 880367583}
+--- !u!95 &914590959
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914590952}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f57ea06853049a49b2a2779163225a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &983015319
 GameObject:
   m_ObjectHideFlags: 0
