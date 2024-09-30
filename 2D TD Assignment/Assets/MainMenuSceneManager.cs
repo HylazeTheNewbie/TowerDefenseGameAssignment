@@ -22,8 +22,13 @@ public class MainMenuSceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // get the audio aound compenent
-        audioSrc= GetComponent<AudioSource>();
+        // get the audio source component
+        audioSrc = GetComponent<AudioSource>();
+        if (audioSrc == null)
+        {
+            Debug.LogError("AudioSource component not found on this GameObject.");
+        }
+
     }
 
     // Update is called once per frame
@@ -32,20 +37,25 @@ public class MainMenuSceneManager : MonoBehaviour
         
     }
 
-    IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(3); // wait for 2 seconds
-        SceneManager.LoadScene("CampaignLev1");  // Go to the "HomeScreen" game scene
+    //IEnumerator WaitAndLoadScene()
+    //{
+    //    yield return new WaitForSeconds(0.1f); // Wait for a short time to ensure the sound plays
+    //    SceneManager.LoadScene("CampaignLev1");  // Go to the "CampaignLev1" game scene
 
-    }
+    //}
 
     public void playGame()
     {
         // call the Wait IEnumerator
-        StartCoroutine(Wait());
+        //StartCoroutine(Wait());
 
+        Debug.Log("playGame method called");
         // play the button hit sound 
         audioSrc.PlayOneShot(buttonHItSound);
+        Debug.Log("Button hit sound played");
+
+        // Wait for a short time before loading the next scene
+        //StartCoroutine(WaitAndLoadScene());
     }
 
     public void quitGame()
@@ -57,7 +67,7 @@ public class MainMenuSceneManager : MonoBehaviour
 
     public void setting()
     {
-        StartCoroutine(Wait());
+        //StartCoroutine(Wait());
 
         // play the button hit sound 
         audioSrc.PlayOneShot(buttonHItSound);
