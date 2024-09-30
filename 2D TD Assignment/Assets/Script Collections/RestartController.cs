@@ -23,6 +23,11 @@ public class RestartController : MonoBehaviour
         SceneManager.LoadScene("CampaignLev1");
     }
 
+    public void ToNextLev()
+    {
+        SceneManager.LoadScene("CampaignLev2");
+    }
+
     public void BackToHome()
     {
         SceneManager.LoadScene("MainMenu");
