@@ -46,9 +46,6 @@ public class MainMenuSceneManager : MonoBehaviour
 
     public void playGame()
     {
-        // call the Wait IEnumerator
-        //StartCoroutine(Wait());
-
         Debug.Log("playGame method called");
         // play the button hit sound 
         audioSrc.PlayOneShot(buttonHItSound);

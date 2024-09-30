@@ -6,14 +6,19 @@ using UnityEngine.SceneManagement;
 public class GameOverMenu : MonoBehaviour
 {
     [SerializeField] GameObject gameOverMenu;
-    public AudioClip buttonHItSound;
+    public AudioClip buttonHitSound;
     static AudioSource audioSrc;
 
     void Start()
     {
-        // get the audio aound compenent
+        // get the audio source component
         audioSrc = GetComponent<AudioSource>();
+        if (audioSrc == null)
+        {
+            Debug.LogError("AudioSource component not found on this GameObject.");
+        }
     }
+
 
     public void gameOver()
     {
@@ -22,16 +27,43 @@ public class GameOverMenu : MonoBehaviour
 
     public void Home()
     {
-        audioSrc.PlayOneShot(buttonHItSound);
-        SceneManager.LoadScene("HomeScreen");
+        // play the button hit sound 
+        audioSrc.PlayOneShot(buttonHitSound);
 
+        // Wait for the sound to finish playing before loading the scene
+        StartCoroutine(LoadSceneAfterSound("MainMenu"));
     }
 
     public void Replay()
     {
-        audioSrc.PlayOneShot(buttonHItSound);
-        SceneManager.LoadScene("CampaignLev1");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        // play the button hit sound 
+        audioSrc.PlayOneShot(buttonHitSound);
+
+        // Wait for the sound to finish playing before reloading the scene
+        StartCoroutine(LoadSceneAfterSound("CampaignLev1"));
+
+        // Reload the current scene
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+
+
+    IEnumerator LoadSceneAfterSound(string sceneName)
+    {
+        // Debug log to ensure the coroutine is executing
+        Debug.Log("Loading scene: " + sceneName);
+
+        // Load the specified scene
+        SceneManager.LoadScene(sceneName);
+        // Wait until the audio has finished playing
+        while (audioSrc.isPlaying)
+        {
+            yield return null;
+        }
+
 
     }
-}
+
+
+
+    }

@@ -9,13 +9,13 @@ public class RestartController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void ResetGame()
@@ -23,10 +23,6 @@ public class RestartController : MonoBehaviour
         SceneManager.LoadScene("CampaignLev1");
     }
 
-    public void ToNextLev()
-    {
-        SceneManager.LoadScene("CampaignLev2");
-    }
 
     public void BackToHome()
     {
