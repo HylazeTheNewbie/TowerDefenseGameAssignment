@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Path1
   - Path2
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -43,22 +44,22 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: "\u5730\u4E0A"
+  - name: Ground
     uniqueID: 823505147
     locked: 0
-  - name: path
+  - name: Path
     uniqueID: 385956853
     locked: 0
-  - name: "\u754C\u9650"
+  - name: Boundary
     uniqueID: 521772793
     locked: 0
-  - name: After Icone
+  - name: After Icon
     uniqueID: 3994099631
     locked: 0
-  - name: platform
+  - name: Platform
     uniqueID: 3787848131
     locked: 0
-  - name: main icon
+  - name: Main Icon
     uniqueID: 3707572787
     locked: 0
   - name: Entity
