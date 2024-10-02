@@ -35,7 +35,7 @@ public class placeTower : MonoBehaviour
         if (tower != null) return;
 
         Tower towerToBuild = BuildManager.main.GetSelectedTower();
-        tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
+        tower = Instantiate(towerToBuild.gameObject, transform.position, Quaternion.identity);
     }
 
     // Update is called once per frame
