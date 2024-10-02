@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class VictoryMenuManager : MonoBehaviour
+public class VictoryMenuManagerLev2 : MonoBehaviour
 {
     public AudioClip buttonHItSound;
     static AudioSource audioSrc;
 
-    public static VictoryMenuManager instance;
+    public static VictoryMenuManagerLev2 instance;
 
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
@@ -36,14 +36,14 @@ public class VictoryMenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void restart()
     {
         audioSrc.PlayOneShot(buttonHItSound);
         Debug.Log("Button hit sound played");
-        SceneManager.LoadScene("CampaignLev1");
+        SceneManager.LoadScene("CampaignLev2");
     }
 
 
@@ -56,7 +56,7 @@ public class VictoryMenuManager : MonoBehaviour
 
     public void loadScene(string sceneName)
     {
-        SceneManager.LoadSceneAsync(sceneName); 
+        SceneManager.LoadSceneAsync(sceneName);
     }
 
 
