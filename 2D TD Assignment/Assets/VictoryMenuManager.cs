@@ -8,6 +8,7 @@ public class VictoryMenuManager : MonoBehaviour
     public AudioClip buttonHItSound;
     static AudioSource audioSrc;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +36,13 @@ public class VictoryMenuManager : MonoBehaviour
     public void nextLevel()
     {
         audioSrc.PlayOneShot(buttonHItSound);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        Debug.Log("Dont have next");
+    }
+
+    public void loadScene(string sceneName)
+    {
+        SceneManager.LoadSceneAsync(sceneName); 
     }
 
 
@@ -44,7 +52,4 @@ public class VictoryMenuManager : MonoBehaviour
         audioSrc.PlayOneShot(buttonHItSound);
         SceneManager.LoadScene("MainMenu");
     }
-
-
-
 }

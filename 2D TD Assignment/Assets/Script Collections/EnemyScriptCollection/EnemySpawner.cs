@@ -28,9 +28,6 @@ public class EnemySpawner : MonoBehaviour
     {
         onEnemySlain.AddListener(EnemyDestroy);
         LM = GameObject.FindObjectOfType<LevelManager>();
-        
-
-       
     }
 
     private void Start()

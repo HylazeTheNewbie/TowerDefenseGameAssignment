@@ -9,21 +9,24 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 872f277519fee0e48aab325b23c205b4
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/TowerSelectionMenu.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/CampaignLev1.unity
     guid: 5b74c71e4c3e1404c847f0f324bc2dd1
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 616c859bbcf812d4285ad31e97efd5f8
+  - enabled: 1
+    path: Assets/Scenes/victoryPanel.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/WinGameScreen.unity
+    guid: 8ef2d4d1c4630be4e96fe9fdf1d7df63
   - enabled: 1
     path: Assets/Scenes/CampaignLev2.unity
     guid: db47e13c6353fb7468f8cf3ba6a0cd47
   - enabled: 0
     path: Assets/Scenes/HomeScreen.unity
     guid: d1b98122cb954274b8d603f7fcc6296f
-  - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-    guid: 616c859bbcf812d4285ad31e97efd5f8
-  - enabled: 1
-    path: Assets/Scenes/WinGameScreen.unity
-    guid: 8ef2d4d1c4630be4e96fe9fdf1d7df63
   m_configObjects: {}

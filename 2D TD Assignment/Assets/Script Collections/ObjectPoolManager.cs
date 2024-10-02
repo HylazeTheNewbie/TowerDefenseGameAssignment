@@ -63,7 +63,7 @@ public class ObjectPoolManager : MonoBehaviour
         else
         {
             obj.SetActive(false);
-            pool.InactiveObjects.Add(obj);
+            pool.InactiveObjects.Add(obj);  
         }
     }
 }

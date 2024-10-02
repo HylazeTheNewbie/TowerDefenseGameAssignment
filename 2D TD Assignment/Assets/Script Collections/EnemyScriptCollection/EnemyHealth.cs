@@ -9,6 +9,9 @@ public class EnemyHealth : MonoBehaviour
 {
     public Slider healthSlider;
     private Enemy _enemy;
+
+    [SerializeField] private int currencyWorth = 50;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +55,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void Die()
     {
+        LevelManager.main.increaseCurrency(currencyWorth);
         ActionSets.OnEnemyKilled?.Invoke(_enemy);
     }
 }

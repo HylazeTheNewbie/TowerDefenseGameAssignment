@@ -10425,8 +10425,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddaff77c2faf19a4288288fe1ad81791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpawner: {fileID: 1401159166}
-  timeBetweenWaves: 5
+  startPoint: {fileID: 610385727}
+  path1:
+  - {fileID: 1168504783}
+  - {fileID: 362924463}
+  - {fileID: 1920324559}
+  - {fileID: 1974551158}
+  - {fileID: 2023032893}
+  - {fileID: 952893210}
+  - {fileID: 232866882}
+  - {fileID: 1863079096}
+  - {fileID: 602697283}
+  - {fileID: 1022438850}
+  - {fileID: 526363158}
+  - {fileID: 708629003}
+  - {fileID: 1064574684}
+  - {fileID: 105167159}
+  - {fileID: 2026480612}
+  - {fileID: 1999396394}
+  - {fileID: 1455289996}
+  path2:
+  - {fileID: 371407143}
+  - {fileID: 1013168760}
+  - {fileID: 1427709943}
+  - {fileID: 1137954174}
+  - {fileID: 1910208052}
+  - {fileID: 1936940047}
+  - {fileID: 1873755768}
+  - {fileID: 952192875}
+  - {fileID: 1159259742}
+  - {fileID: 1904060340}
+  - {fileID: 1262718811}
+  - {fileID: 491523346}
+  - {fileID: 191358688}
+  - {fileID: 1915291045}
+  - {fileID: 851022703}
+  - {fileID: 1007052720}
+  currency: 0
 --- !u!4 &1401159163
 Transform:
   m_ObjectHideFlags: 0

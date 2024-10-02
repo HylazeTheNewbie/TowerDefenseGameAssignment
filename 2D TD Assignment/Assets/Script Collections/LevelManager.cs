@@ -14,6 +14,32 @@ public class LevelManager : MonoBehaviour
 
     public float timeBetweenWaves = 5f;
 
+    public int currency;
+
+    private void Start()
+    {
+        currency = 100;
+    }
+
+    public void increaseCurrency(int amount)
+    {
+        currency += amount;
+    }
+
+    public bool SpendCurrency(int amount)
+    {
+        if(amount <= currency)
+        {
+            currency -= amount;
+            return true;
+        }
+        else
+        {
+            Debug.Log("You dont have enough money to buy this tower");
+            return false;
+        }
+    }
+
 
     private void Start()
     {
