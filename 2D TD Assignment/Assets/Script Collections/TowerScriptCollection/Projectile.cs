@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public static Action<Enemy, float> OnEnemyHit;
-
     [SerializeField] protected float movespeed = 10f;
     [SerializeField] protected float minDistanceDealDamage = 0.1f;
     
@@ -37,7 +35,7 @@ public class Projectile : MonoBehaviour
 
         if (distanceToTarget < minDistanceDealDamage)
         {
-            OnEnemyHit?.Invoke(enemyTarget, damage);
+            ActionSets.OnProjectileHit?.Invoke(enemyTarget, damage);
             // enemyTarget.EnemyHealth.DealDamage(damage);
             // projectileOwner.ResetTowerProjectile();
             ObjectPooler.ReturnToPool(gameObject);

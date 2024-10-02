@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7485455749364073980}
   - component: {fileID: 1264693495314432615}
   - component: {fileID: 7137974992100685911}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HealthCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -791632243
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &1264693495314432615
@@ -112,7 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1711444968620592718}
   - component: {fileID: 5641961796022110644}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 6497848413021691526}
   - component: {fileID: 7686649431089491888}
   - component: {fileID: 2911782748514310942}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,9 +279,11 @@ GameObject:
   - component: {fileID: 3190657754141466884}
   - component: {fileID: 2593046813969032938}
   - component: {fileID: 3402304886632317991}
-  - component: {fileID: 760340142977466623}
-  - component: {fileID: 3210092512736918108}
-  m_Layer: 0
+  - component: {fileID: 7828494428945280861}
+  - component: {fileID: 4223467030821018983}
+  - component: {fileID: 8846923334251770284}
+  - component: {fileID: 5586324134467175772}
+  m_Layer: 7
   m_Name: Virus
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -456,7 +458,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &760340142977466623
+--- !u!114 &7828494428945280861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6629672071512676976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c3753bc8f4b8e443bfe97c66f0bf8af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  currentHealth: 0
+  moveSpeed: 0
+  deathCoinReward: 0
+--- !u!114 &4223467030821018983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6629672071512676976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4309502a405723e4392123ea02bc710f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 3190657754141466884}
+--- !u!114 &8846923334251770284
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -469,7 +500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 5641961796022110644}
---- !u!114 &3210092512736918108
+--- !u!114 &5586324134467175772
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -481,8 +512,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25aab9057b7fbb2489c0fb391abac13c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
-  currentHealth: 50
 --- !u!1 &7340226226715785943
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,7 +523,7 @@ GameObject:
   - component: {fileID: 4806677679601904298}
   - component: {fileID: 8280772133035330089}
   - component: {fileID: 5200148556228246810}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HealthBarBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

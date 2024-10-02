@@ -7,15 +7,13 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public static Action<Enemy> onEnemyKilled;
-    public static Action<Enemy> onEnemyHit;
-
     public Slider healthSlider;
-
+    private Enemy _enemy;
     // Start is called before the first frame update
     void Start()
     {
-       
+       healthSlider = GetComponentInChildren<Slider>();
+       _enemy = GetComponent<Enemy>();
     }
 
     // Update is called once per frame
@@ -30,8 +28,30 @@ public class EnemyHealth : MonoBehaviour
         healthSlider.value = health;
     }
 
-    public void SetHealth(float health)
+    public void SetHealth(float currentHealth)
     {
-        healthSlider.value = health;
+        healthSlider.value = currentHealth;
+    }
+
+    public void DealDamage(float damageReceived)
+    {
+        float currentHealth = healthSlider.value;
+        currentHealth -= damageReceived;
+        healthSlider.value = currentHealth;
+
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            Die();
+        }
+        else
+        {
+            ActionSets.OnEnemyHit?.Invoke(_enemy);
+        }
+    }
+
+    public void Die()
+    {
+        ActionSets.OnEnemyKilled?.Invoke(_enemy);
     }
 }

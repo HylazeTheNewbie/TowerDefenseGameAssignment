@@ -5,10 +5,10 @@ using UnityEngine;
 public class ObjectPooler : MonoBehaviour
 {
     [SerializeField] private GameObject prefab;
-    [SerializeField] private int poolSize = 10;
+    [SerializeField] private int poolSize = 15;
+    [SerializeField] private Transform spawnPoint;
     private List<GameObject> pool;
     private GameObject poolCointainer;
-    private GameObject spawnPoint = GameObject.Find("StartPoint");
 
     private void Awake()
     {

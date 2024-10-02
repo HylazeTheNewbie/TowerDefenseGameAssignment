@@ -5,4 +5,6 @@ using System;
 public static class ActionSets
 {
     public static Action<Enemy> OnEnemyHit;
+    public static Action<Enemy> OnEnemyKilled;
+    public static Action<Enemy, float> OnProjectileHit;
 }
