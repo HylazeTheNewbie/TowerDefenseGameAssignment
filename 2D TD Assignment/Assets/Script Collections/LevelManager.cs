@@ -5,31 +5,46 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    public static LevelManager main;
-    public Transform startPoint;
-    public List<Transform> path1;
-    public List<Transform> path2;
+    public EnemySpawner enemySpawner;
+    private int MaxWave { get; set; }
+
+    public int CurrentWave{ get; set;}
+    public int TotalLives { get; set; }
+    public int CurrentLives { get; set; }
+
+    public float timeBetweenWaves = 5f;
 
 
-    private void Awake()
+    private void Start()
     {
-        main = this;
-
-        // Find and store paths in a straightforward manner
-        GameObject[] waypoints1 = GameObject.FindGameObjectsWithTag("Path1");
-        GameObject[] waypoints2 = GameObject.FindGameObjectsWithTag("Path2");
+        TotalLives = 15;
+        CurrentWave = 0;
     }
 
-    public List<Transform> GetPathByTag(string tag)
+    private void ReduceLives(Enemy enemy)
     {
-        switch (tag)
+        TotalLives--;
+        EnemySpawner.onEnemySlain.Invoke();    
+
+        if (TotalLives <= 0)
         {
-            case "Path1":
-                return path1;
-            case "Path2":
-                return path2;
-            default:
-                return null;
+            TotalLives = 0;
+            GameOver();
         }
+    }
+
+    private void GameOver()
+    {
+
+    }
+
+    private void OnEnable()
+    {
+        ActionSets.OnEnemyReached += ReduceLives;
+    }
+
+    private void OnDisable()
+    {
+        ActionSets.OnEnemyReached -= ReduceLives;
     }
 }

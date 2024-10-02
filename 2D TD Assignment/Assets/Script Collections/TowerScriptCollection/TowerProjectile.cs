@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class TowerProjectile : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] protected Transform projectileSpawnPosition;
+    [SerializeField] protected float delayBetweenAttacks = 1f;
+    [SerializeField] protected float damage = 15f;
+
+    public float Damage { get; set; }
+    public float DelayPerShot { get; set; }
+
+    protected float _nextAttackTime;
+    protected ObjectPoolManager _pooler;
+    protected Tower _tower;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         

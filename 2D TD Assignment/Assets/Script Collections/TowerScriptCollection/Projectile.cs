@@ -38,7 +38,7 @@ public class Projectile : MonoBehaviour
             ActionSets.OnProjectileHit?.Invoke(enemyTarget, damage);
             // enemyTarget.EnemyHealth.DealDamage(damage);
             // projectileOwner.ResetTowerProjectile();
-            ObjectPooler.ReturnToPool(gameObject);
+            ObjectPoolManager.ReturnToPool(gameObject);
         }
     }
 
