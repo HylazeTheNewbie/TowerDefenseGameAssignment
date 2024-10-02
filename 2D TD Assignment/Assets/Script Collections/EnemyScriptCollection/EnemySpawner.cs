@@ -17,6 +17,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private int enemiesLeftToSpawn;
 
     public GameObject[] enemyTypes;
+    public Transform spawnPoint;
 
     [Header("Fixed Delay")]
     [SerializeField] private float delayBtwSpawns = 5;
@@ -52,7 +53,8 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-       
+        GameObject enemyPrefab = GetEnemyTypeForWave(LM.CurrentWave);
+        ObjectPoolManager.SpawnObject(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
     }
 
     private GameObject GetEnemyTypeForWave(int level)

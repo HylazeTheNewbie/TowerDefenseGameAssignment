@@ -6,6 +6,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public EnemySpawner enemySpawner;
+    public static LevelManager main;
     private int MaxWave { get; set; }
 
     public int CurrentWave{ get; set;}
@@ -14,7 +15,10 @@ public class LevelManager : MonoBehaviour
     public int currency;
     public float timeBetweenWaves = 5f;
 
-
+    void Awake()
+    {
+        main = this;
+    }
     private void Start()
     {
         currency = 100;

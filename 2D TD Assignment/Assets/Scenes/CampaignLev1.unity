@@ -10176,6 +10176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1236281141}
+  - component: {fileID: 1236281142}
   m_Layer: 0
   m_Name: EnemyPool
   m_TagString: Untagged
@@ -10198,6 +10199,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1236281142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236281140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6673a1fe7cf1ae844ac265ad1e2c090d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1262718810
 GameObject:
   m_ObjectHideFlags: 0
@@ -10425,43 +10438,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddaff77c2faf19a4288288fe1ad81791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPoint: {fileID: 610385727}
-  path1:
-  - {fileID: 1168504783}
-  - {fileID: 362924463}
-  - {fileID: 1920324559}
-  - {fileID: 1974551158}
-  - {fileID: 2023032893}
-  - {fileID: 952893210}
-  - {fileID: 232866882}
-  - {fileID: 1863079096}
-  - {fileID: 602697283}
-  - {fileID: 1022438850}
-  - {fileID: 526363158}
-  - {fileID: 708629003}
-  - {fileID: 1064574684}
-  - {fileID: 105167159}
-  - {fileID: 2026480612}
-  - {fileID: 1999396394}
-  - {fileID: 1455289996}
-  path2:
-  - {fileID: 371407143}
-  - {fileID: 1013168760}
-  - {fileID: 1427709943}
-  - {fileID: 1137954174}
-  - {fileID: 1910208052}
-  - {fileID: 1936940047}
-  - {fileID: 1873755768}
-  - {fileID: 952192875}
-  - {fileID: 1159259742}
-  - {fileID: 1904060340}
-  - {fileID: 1262718811}
-  - {fileID: 491523346}
-  - {fileID: 191358688}
-  - {fileID: 1915291045}
-  - {fileID: 851022703}
-  - {fileID: 1007052720}
+  enemySpawner: {fileID: 0}
   currency: 0
+  timeBetweenWaves: 5
 --- !u!4 &1401159163
 Transform:
   m_ObjectHideFlags: 0
@@ -10593,6 +10572,7 @@ MonoBehaviour:
   enemiesAlive: 0
   enemiesLeftToSpawn: 0
   enemyTypes: []
+  spawnPoint: {fileID: 0}
   delayBtwSpawns: 5
   LM: {fileID: 1401159162}
 --- !u!4 &1405748698 stripped

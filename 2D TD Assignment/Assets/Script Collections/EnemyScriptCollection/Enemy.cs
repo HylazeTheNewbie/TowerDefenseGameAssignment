@@ -126,7 +126,7 @@ public class Enemy : MonoBehaviour
     {
         ActionSets.OnEnemyReached?.Invoke(this);
         this.ResetHealth();
-        ObjectPoolManager.ReturnObjectToPool(gameObject);
+        ObjectPoolManager.ReturnToPool(gameObject);
     }
 
     protected void ResetHealth()

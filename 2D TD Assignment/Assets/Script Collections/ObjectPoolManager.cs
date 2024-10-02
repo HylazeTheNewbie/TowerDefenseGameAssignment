@@ -50,7 +50,7 @@ public class ObjectPoolManager : MonoBehaviour
         return spawnableObjects;
     }
 
-    public static void ReturnObjectToPool(GameObject obj)
+    public static void ReturnToPool(GameObject obj)
     {
         string goName = obj.name.Substring(0, obj.name.Length - 7);
 
