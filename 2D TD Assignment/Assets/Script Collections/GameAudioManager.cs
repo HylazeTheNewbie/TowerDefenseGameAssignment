@@ -27,6 +27,7 @@ public class GameAudioManager : MonoBehaviour
         if (!PlayerPrefs.HasKey("muted"))
         {
             PlayerPrefs.SetInt("muted", 0); // for the default setting for the sound
+            Load();
         }
         else
         {
