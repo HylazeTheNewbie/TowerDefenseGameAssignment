@@ -34,8 +34,8 @@ public class placeTower : MonoBehaviour
         Debug.Log("Place here");
         if (tower != null) return;
 
-        Tower towerToBuild = BuildManager.main.GetSelectedTower();
-        tower = Instantiate(towerToBuild.gameObject, transform.position, Quaternion.identity);
+        GameObject towerToBuild = BuildManager.main.GetSelectedTower();
+        tower = Instantiate(towerToBuild, transform.position, Quaternion.identity);
     }
 
     // Update is called once per frame

@@ -7,7 +7,7 @@ public class BuildManager : MonoBehaviour
     public static BuildManager main;
 
     [Header("References")]
-    [SerializeField] private Tower[] towers;
+    [SerializeField] private GameObject[] towers;
 
     private int selectedTower = 0;
 
@@ -16,7 +16,7 @@ public class BuildManager : MonoBehaviour
         main = this;
     }
 
-    public Tower GetSelectedTower()
+    public GameObject GetSelectedTower()
     {
         return towers[selectedTower];
     }
