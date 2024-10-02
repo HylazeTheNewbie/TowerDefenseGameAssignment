@@ -8,20 +8,6 @@ public class VictoryMenuManager : MonoBehaviour
     public AudioClip buttonHItSound;
     static AudioSource audioSrc;
 
-    public static VictoryMenuManager instance;
-
-    private void Awake()
-    {
-        if(instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 
     // Start is called before the first frame update
     void Start()
