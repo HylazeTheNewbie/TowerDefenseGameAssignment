@@ -21,11 +21,20 @@ public class Virus : Enemy
         InitializeAttributes(_maxHealth, _moveSpeed, _deathCoinReward, _isHidden, healthBar);
         _currentHealth = _maxHealth;
 
+        waypointList = EnemyPathing.main.path1;
         SetEnemyMaxHealth(_maxHealth);
     }
 
     private void Update()
     {
+        Move();
+        Rotate();
+
+        if (CurrentPointPositionReached())
+        {
+            UpdateCurrentPointIndex();
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             ReceiveDamage(20);

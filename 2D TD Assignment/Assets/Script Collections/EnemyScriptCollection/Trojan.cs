@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Trojan : Enemy
 {
@@ -22,11 +21,21 @@ public class Trojan : Enemy
         InitializeAttributes(_maxHealth, _moveSpeed, _deathCoinReward, _isHidden, healthBar);
         _currentHealth = _maxHealth;
 
+        waypointList = EnemyPathing.main.path1;
+
         SetEnemyMaxHealth(_maxHealth);
     }
 
     private void Update()
     {
+        Move();
+        Rotate();
+
+        if (CurrentPointPositionReached())
+        {
+            UpdateCurrentPointIndex();
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             ReceiveDamage(20);

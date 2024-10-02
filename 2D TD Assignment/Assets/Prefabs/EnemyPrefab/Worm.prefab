@@ -470,10 +470,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc9334e6fcac18441906de8b699ed1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
-  currentHealth: 0
-  moveSpeed: 0
-  deathCoinReward: 0
+  maxHealth: 100
+  currentHealth: 100
+  moveSpeed: 1.5
+  deathCoinReward: 15
+  isHidden: 0
+  _enemySpawnPosition: {fileID: 0}
 --- !u!114 &8138812636371190517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,6 +518,8 @@ MonoBehaviour:
   currentHealth: 0
   moveSpeed: 0
   deathCoinReward: 0
+  isHidden: 0
+  _enemySpawnPosition: {fileID: 0}
 --- !u!1 &8945336889951786434
 GameObject:
   m_ObjectHideFlags: 0

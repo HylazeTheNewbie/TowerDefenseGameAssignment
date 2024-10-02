@@ -5,16 +5,21 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    public static LevelManager main;
-    public Transform startPoint;
-    public List<Transform> path1;
-    public List<Transform> path2;
+    public EnemySpawner enemySpawner;
+    private int MaxWave { get; set; }
 
+    public int CurrentWave{ get; set;}
+    public int TotalLives { get; set; }
+    public int CurrentLives { get; set; }
     public int currency;
+    public float timeBetweenWaves = 5f;
+
 
     private void Start()
     {
         currency = 100;
+        TotalLives = 15;
+        CurrentWave = 0;
     }
 
     public void increaseCurrency(int amount)
@@ -36,26 +41,30 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-
-    private void Awake()
+    private void ReduceLives(Enemy enemy)
     {
-        main = this;
+        TotalLives--;
+        EnemySpawner.onEnemySlain.Invoke();    
 
-        // Find and store paths in a straightforward manner
-        GameObject[] waypoints1 = GameObject.FindGameObjectsWithTag("Path1");
-        GameObject[] waypoints2 = GameObject.FindGameObjectsWithTag("Path2");
+        if (TotalLives <= 0)
+        {
+            TotalLives = 0;
+            GameOver();
+        }
     }
 
-    public List<Transform> GetPathByTag(string tag)
+    private void GameOver()
     {
-        switch (tag)
-        {
-            case "Path1":
-                return path1;
-            case "Path2":
-                return path2;
-            default:
-                return null;
-        }
+
+    }
+
+    private void OnEnable()
+    {
+        ActionSets.OnEnemyReached += ReduceLives;
+    }
+
+    private void OnDisable()
+    {
+        ActionSets.OnEnemyReached -= ReduceLives;
     }
 }
