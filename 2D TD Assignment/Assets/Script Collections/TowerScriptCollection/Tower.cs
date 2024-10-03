@@ -8,8 +8,8 @@ public class Tower : MonoBehaviour
     public float range;
     public bool hiddenDetection;
 
-    public List<Enemy> enemies;
-    public Enemy currentEnemyTarget;
+    [HideInInspector] public List<Enemy> enemies;
+    [HideInInspector] public Enemy currentEnemyTarget;
     // Start is called before the first frame update
     private void Start()
     {
