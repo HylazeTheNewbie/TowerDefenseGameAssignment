@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 7143232766895336417}
   - component: {fileID: 8118890779890828443}
   - component: {fileID: 47944810924699923}
+  - component: {fileID: -3430111949230002296}
   m_Layer: 0
   m_Name: Trojan
   m_TagString: Enemy
@@ -474,6 +475,7 @@ MonoBehaviour:
   currentHealth: 0
   moveSpeed: 0
   deathCoinReward: 0
+  isHidden: 0
 --- !u!114 &7143232766895336417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,6 +502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 5499964062967421511}
+  currencyWorth: 50
 --- !u!114 &47944810924699923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,6 +515,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac2c93f4c26fa3479ba34d5ce457ea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
+  currentHealth: 0
+  moveSpeed: 0
+  deathCoinReward: 0
+  isHidden: 1
+--- !u!114 &-3430111949230002296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7527711614696069179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74b10cc00aa1fc54d8a1bb31efa46dc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 5187687595040778254}
+  moveSpeed: 2.5
+  pathTag: Path1
 --- !u!1 &9083982479624297366
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private Transform target;
+    [Header("Bullet Attributes")]
+    public float damage;
     public float speed = 80f;
+    public float explsionRadius = 0f;
+
+    private Transform target;
 
     void Start()
     {
@@ -37,8 +41,44 @@ public class Bullet : MonoBehaviour
         target = _target;
     }
 
-    public void HitTarget()
+    private void HitTarget()
     {
+        if (explsionRadius > 0f)
+        {
+            Explode();  
+        }
+        else
+        {
+            Damage(target);
+        }
+
         Destroy(gameObject); 
+    }
+
+    void Explode()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explsionRadius);
+
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.tag == "Enemy")
+            {
+                Damage(collider.transform);
+            }
+        }
+    }
+
+    void Damage(Transform enemy)
+    {
+        Enemy e = enemy.GetComponent<Enemy>();
+        
+        if (e != null)      
+            e.ReceiveDamage(damage);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, explsionRadius);
     }
 }
