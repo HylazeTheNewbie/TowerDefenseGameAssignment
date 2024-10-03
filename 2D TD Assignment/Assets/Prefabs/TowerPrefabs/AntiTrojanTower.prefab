@@ -209,8 +209,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3528647479198532998}
   - component: {fileID: 6319241831544250322}
+  - component: {fileID: 2063687214449628033}
+  - component: {fileID: 4256012961377978705}
   m_Layer: 0
-  m_Name: AntitrojanTower
+  m_Name: AntiTrojanTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,3 +256,60 @@ MonoBehaviour:
   partToRotate: {fileID: 6023141302415207562}
   bulletPrefab: {fileID: 5184737219323731865, guid: 0411b335af37e4f41b0a672fbef848b6, type: 3}
   firePoint: {fileID: 1741673449414908340}
+--- !u!61 &2063687214449628033
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8993065323006959044}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0048178434, y: 0.014454722}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.1467412, y: 2.1467412}
+  m_EdgeRadius: 0
+--- !u!114 &4256012961377978705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8993065323006959044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8adc0989b784af748a86fe2bb4ac674c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
