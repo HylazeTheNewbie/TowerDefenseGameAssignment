@@ -7,11 +7,11 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
     [Header("Common Attributes")]
-    [SerializeField] protected float maxHealth;
-    [SerializeField] protected float currentHealth;
-    [SerializeField] protected float moveSpeed;
-    [SerializeField] protected int deathCoinReward;
-    [SerializeField] protected bool isHidden;
+    [SerializeField] public float maxHealth;
+    [SerializeField] public float currentHealth;
+    [SerializeField] public float moveSpeed;
+    [SerializeField] public int deathCoinReward;
+    [SerializeField] public bool isHidden;
 
     private EnemyHealth _healthBar;
     private Slider _healthSlider;
@@ -21,6 +21,8 @@ public class Enemy : MonoBehaviour
     {
         _healthBar = GetComponent<EnemyHealth>();
         _healthSlider = _healthBar.healthSlider.GetComponent<Slider>();
+        currentHealth = maxHealth;
+        SetEnemyMaxHealth(maxHealth);
     }
 
     // Update is called once per frame

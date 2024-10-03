@@ -67,6 +67,7 @@ public class EnemyHealth : MonoBehaviour
         audioManager.PlaySFX(audioManager.death);
         ActionSets.OnEnemyKilled?.Invoke(_enemy);
         EnemySpawner.onEnemyDestroyed.Invoke();
+        LevelManager.main.IncreaseCurrency(_enemy.deathCoinReward);
         Destroy(gameObject);
     }
 }
