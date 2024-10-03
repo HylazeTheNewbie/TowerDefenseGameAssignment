@@ -9,6 +9,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioSource sfxSource;
     public AudioClip death;
     public AudioClip placeTower;
+    public AudioClip shoot;
 
     private void Start()
     {

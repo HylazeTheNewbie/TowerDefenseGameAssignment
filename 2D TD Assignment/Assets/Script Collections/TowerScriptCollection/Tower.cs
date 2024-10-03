@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
+    SoundManager audioManager;
+
     [Header("Tower Attributes")]
     public float fireRate;
     private float fireCooldown = 0f;
@@ -18,6 +20,11 @@ public class Tower : MonoBehaviour
     public Transform partToRotate;
     public GameObject bulletPrefab;
     public Transform firePoint;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
+    }
 
     // Start is called before the first frame update
     private void Start()
@@ -46,6 +53,7 @@ public class Tower : MonoBehaviour
 
     private void Shoot()
     {
+        audioManager.PlaySFX(audioManager.shoot);
         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
 

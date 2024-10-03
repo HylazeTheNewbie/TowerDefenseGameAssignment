@@ -25,6 +25,7 @@ public class Plot : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        audioManager.PlaySFX(audioManager.placeTower);
         sr.color = hoverColor;
     }
 
@@ -37,7 +38,6 @@ public class Plot : MonoBehaviour
     {
         if (tower != null) return;
 
-        audioManager.PlaySFX(audioManager.placeTower);
         SelectTower towerToBuild = BuildManager.main.GetSelectedTower();
         tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
     }
