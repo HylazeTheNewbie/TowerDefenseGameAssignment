@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 3528647479198532998}
   - component: {fileID: 3781559850925276404}
   m_Layer: 0
-  m_Name: AntivirusTower
+  m_Name: AntiwormTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
