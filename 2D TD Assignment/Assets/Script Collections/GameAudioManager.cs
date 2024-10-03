@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class GameAudioManager : MonoBehaviour
 {
     [SerializeField] Slider volumeSlider; //for the volume
-    [SerializeField] Image soundOnIcon;
-    [SerializeField] Image soundOffIcon;
+    [SerializeField] Button soundOnIcon;
+    [SerializeField] Button soundOffIcon;
     private bool muted = false;
 
     // Start is called before the first frame update
@@ -64,7 +64,7 @@ public class GameAudioManager : MonoBehaviour
     }
 
     // for the sound button on and off 
-    public void onButtonPress()
+    public void OnButtonPress()
     {
         if (muted == false)
         {
