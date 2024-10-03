@@ -658,10 +658,10 @@ MonoBehaviour:
     prefab: {fileID: 8993065323006959044, guid: 45b182931e3314d4f947ab8bb3bcc3e5, type: 3}
   - name: AntiVirusTower
     cost: 150
-    prefab: {fileID: 8993065323006959044, guid: dec1e39a021ed2b48bd172aeaedc2148, type: 3}
+    prefab: {fileID: 8760145479488994962, guid: e7f90b7ff3e1d3648ad21478f7d07638, type: 3}
   - name: AntiWormTower
     cost: 150
-    prefab: {fileID: 8993065323006959044, guid: ca704200f646f5b4cbbfd347c5ece64e, type: 3}
+    prefab: {fileID: 4507549860297667495, guid: ca704200f646f5b4cbbfd347c5ece64e, type: 3}
 --- !u!1001 &777404459
 PrefabInstance:
   m_ObjectHideFlags: 0
