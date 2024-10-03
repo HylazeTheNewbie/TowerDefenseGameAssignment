@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject[] enemyPrefabs;
 
     [Header("Attributes")]
-    [SerializeField] private int baseEnemiesEquilvalent = 4;
+    [SerializeField] private int baseEnemiesEquilvalent = 5;
     [SerializeField] private float enemiesPerSec = 0.75f;
     [SerializeField] private float timeBetweenWaves = 5f;
     [SerializeField] private float difficultyScalingFactor = 0.5f;

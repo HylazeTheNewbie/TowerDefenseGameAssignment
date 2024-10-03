@@ -2,29 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Tower : MonoBehaviour
+public class Tower : MonoBehaviour
 {
-    [SerializeField] protected float range;
-    [SerializeField] protected bool hiddenDetection;
+    public Transform target;
+    public float range;
+    public bool hiddenDetection;
 
-    protected CircleCollider2D circleCollider2D;
-    protected List<Enemy> enemies;
-    protected Enemy currentEnemyTarget;
+    public List<Enemy> enemies;
+    public Enemy currentEnemyTarget;
     // Start is called before the first frame update
     private void Start()
     {
-        circleCollider2D = GetComponent<CircleCollider2D>();
-        circleCollider2D.isTrigger = true;
-        circleCollider2D.radius = range;
+        InvokeRepeating("UpdateTarget", 0f, 0.25f);
     }
 
-    // Update is called once per frame
-    private void Update()
+    private void UpdateTarget()
     {
 
     }
 
-    protected void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))
         {
@@ -37,7 +34,7 @@ public abstract class Tower : MonoBehaviour
         }
     }
     
-    protected void OnTriggerExit2D(Collider2D other)
+    void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Enemy") )
         {
@@ -49,7 +46,7 @@ public abstract class Tower : MonoBehaviour
         }
     }
 
-    protected void GetCurrentEnemyTarget()
+    void GetCurrentEnemyTarget()
     {
         if (enemies.Count <= 0)
         {
@@ -59,10 +56,16 @@ public abstract class Tower : MonoBehaviour
 
         currentEnemyTarget = enemies[0];
     }
-    protected void RotateTowards(GameObject target)
+   void RotateTowards(GameObject target)
     {
         Vector3 direction = target.transform.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, range);
     }
 }
