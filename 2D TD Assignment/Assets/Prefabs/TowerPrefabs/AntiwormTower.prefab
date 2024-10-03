@@ -1,38 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2118890972123359114
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8298121166784328929}
-  m_Layer: 0
-  m_Name: RotatePoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8298121166784328929
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118890972123359114}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.010636665, w: 0.99994344}
-  m_LocalPosition: {x: -0.033287723, y: -0.04858127, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2853531553968446650}
-  - {fileID: 3843663046456493585}
-  m_Father: {fileID: 3528647479198532998}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.219}
 --- !u!1 &4760498215257443736
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,13 +25,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4760498215257443736}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.001701626, w: 0.99999857}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.507184, y: 0.5231691, z: 1}
+  m_LocalScale: {x: 0.5071841, y: 0.5231691, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8298121166784328929}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.195}
+  m_Father: {fileID: 3528647479198532998}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2486172261352685690
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -141,12 +108,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5538707506636248358}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.008346471, w: 0.9999652}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.06, y: 0.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8298121166784328929}
+  m_Father: {fileID: 3528647479198532998}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6746826492973315135
 GameObject:
@@ -241,7 +208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3528647479198532998}
-  - component: {fileID: 1645132577491385291}
+  - component: {fileID: 4664969478950315667}
   m_Layer: 0
   m_Name: AntiwormTower
   m_TagString: Untagged
@@ -263,41 +230,27 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 605061755052515338}
-  - {fileID: 8298121166784328929}
+  - {fileID: 2853531553968446650}
+  - {fileID: 3843663046456493585}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.262}
---- !u!58 &1645132577491385291
-CircleCollider2D:
+--- !u!114 &4664969478950315667
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8993065323006959044}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 5
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098702d64d0985e40a0c07791c36a34f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 1
+  range: 6
+  hiddenDetection: 0
+  turnSpeed: 120
+  target: {fileID: 0}
+  partToRotate: {fileID: 2853531553968446650}
+  bulletPrefab: {fileID: 3612829791536195458, guid: 9e8d474be7838414b8b2f92cd28c6800, type: 3}
+  firePoint: {fileID: 3843663046456493585}
