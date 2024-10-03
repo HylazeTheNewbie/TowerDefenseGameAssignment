@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class Plot : MonoBehaviour
 {
+    SoundManager audioManager;
+
     [Header("References")]
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Color hoverColor;
 
     private GameObject tower;
     private Color startColor;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
+    }
 
     void Start()
     {
@@ -18,6 +25,7 @@ public class Plot : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        audioManager.PlaySFX(audioManager.placeTower);
         sr.color = hoverColor;
     }
 
@@ -29,7 +37,7 @@ public class Plot : MonoBehaviour
     private void OnMouseDown()
     {
         if (tower != null) return;
-        
+
         SelectTower towerToBuild = BuildManager.main.GetSelectedTower();
         tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
     }
