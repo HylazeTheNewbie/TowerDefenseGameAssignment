@@ -16919,6 +16919,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 777179436}
+    - target: {fileID: 1274775941682969625, guid: 867b71f4911a6624cb1898709f476806, type: 3}
+      propertyPath: HoverItem
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1454529466617411145, guid: 867b71f4911a6624cb1898709f476806, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -17107,6 +17111,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6869738162823784556, guid: 867b71f4911a6624cb1898709f476806, type: 3}
+      propertyPath: HoverItem
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7625912811517460433, guid: 867b71f4911a6624cb1898709f476806, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -17151,7 +17159,10 @@ PrefabInstance:
       propertyPath: m_margin.z
       value: -0.76874924
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6869738162823784556, guid: 867b71f4911a6624cb1898709f476806, type: 3}
+    - {fileID: 1274775941682969625, guid: 867b71f4911a6624cb1898709f476806, type: 3}
+    - {fileID: 1133820379544038735, guid: 867b71f4911a6624cb1898709f476806, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5038026090780504256, guid: 867b71f4911a6624cb1898709f476806, type: 3}
     - {fileID: 6812013926945002620, guid: 867b71f4911a6624cb1898709f476806, type: 3}
