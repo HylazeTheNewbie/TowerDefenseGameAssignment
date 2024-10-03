@@ -13,7 +13,7 @@ public class Virus : Enemy
     private int _deathCoinReward = 10;
     private bool _isHidden = false;
 
-    private void Start()
+    private void Awake()
     {
         virus = GetComponent<Enemy>();
         healthBar = GetComponentInChildren<EnemyHealth>();
