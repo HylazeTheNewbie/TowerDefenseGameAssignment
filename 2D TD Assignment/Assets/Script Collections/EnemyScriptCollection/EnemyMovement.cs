@@ -29,7 +29,6 @@ public class EnemyMovement : MonoBehaviour
         }
 
         target = path[targetIndex];
-        Debug.Log("Path Count : " + path.Count);
     }
 
     void Update()
