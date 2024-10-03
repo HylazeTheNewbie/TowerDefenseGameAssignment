@@ -64,7 +64,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void Die()
     {
-        
+        audioManager.PlaySFX(audioManager.death);
         ActionSets.OnEnemyKilled?.Invoke(_enemy);
         EnemySpawner.onEnemyDestroyed.Invoke();
         Destroy(gameObject);
