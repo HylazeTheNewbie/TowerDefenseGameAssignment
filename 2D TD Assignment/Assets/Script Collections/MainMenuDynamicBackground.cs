@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class MainMenuDynamicBackground : MonoBehaviour
 {
@@ -21,10 +22,15 @@ public class MainMenuDynamicBackground : MonoBehaviour
     void Start()
     {
         scaler = GetComponentInParent<CanvasScaler>();
+        // get referenceResolution
+        Vector2 referenceResolution = scaler.referenceResolution;
         rectTransform = GetComponent<RectTransform>();
         cameraResolution = getCameraPos();
         imageResolution = getBGImagePos();
-        horizontalBoundary = 0.3f + ((imageResolution.x - cameraResolution.x) / 128);
+        //horizontalBoundary = 0.3f + ((imageResolution.x - cameraResolution.x) / 128);
+        //Adjust the boundary according to the reference resolution to ensure that the movement range of the background is appropriate under different resolutions
+        horizontalBoundary = 0.3f + ((imageResolution.x - cameraResolution.x) / 128) * (cameraResolution.x / referenceResolution.x);
+        //The initial position of the initial background
         startPositionX = transform.position;
     }
 
@@ -43,11 +49,14 @@ public class MainMenuDynamicBackground : MonoBehaviour
 
     Vector2 getBGImagePos()
     {
-        Image image = GetComponent<Image>();
+        UnityEngine.UI.Image image = GetComponent<UnityEngine.UI.Image>();
+        //Image image = GetComponent<Image>();
 
         if (image.sprite != null && image.sprite.texture != null)
         {
-            imageResolution = new Vector2(rectTransform.sizeDelta.x, rectTransform.sizeDelta.y);
+            //imageResolution = new Vector2(rectTransform.sizeDelta.x, rectTransform.sizeDelta.y);
+            imageResolution = new Vector2(rectTransform.rect.width, rectTransform.rect.height);
+
         }
         else
             Debug.Log("Image or texture is missing!");
