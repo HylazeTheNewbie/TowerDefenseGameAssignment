@@ -56,5 +56,7 @@ public class EnemyHealth : MonoBehaviour
     public void Die()
     {
         ActionSets.OnEnemyKilled?.Invoke(_enemy);
+        EnemySpawner.onEnemyDestroyed.Invoke();
+        Destroy(gameObject);
     }
 }

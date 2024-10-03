@@ -49,7 +49,7 @@ public class Enemy : MonoBehaviour
         _healthBar.SetMaxHealth(maxHealth);
     }
 
-    protected void ReceiveDamage(float damageReceived)
+    public void ReceiveDamage(float damageReceived)
     {
         _healthBar.DealDamage(damageReceived);
     }
