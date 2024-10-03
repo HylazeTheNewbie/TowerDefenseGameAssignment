@@ -11,7 +11,7 @@ public class MenuScript : MonoBehaviour
 
     public void SetSelected()
     {
-
+            
     }
 
     [SerializeField] Animator anim;

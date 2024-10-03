@@ -516,6 +516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 5499964062967421511}
+  currencyWorth: 50
 --- !u!1 &9083982479624297366
 GameObject:
   m_ObjectHideFlags: 0
