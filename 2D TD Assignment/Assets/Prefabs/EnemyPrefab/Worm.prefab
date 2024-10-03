@@ -279,7 +279,6 @@ GameObject:
   - component: {fileID: 739959477644878690}
   - component: {fileID: 6770853360358101900}
   - component: {fileID: 2492798217184160181}
-  - component: {fileID: -4787458239212380267}
   - component: {fileID: 8138812636371190517}
   - component: {fileID: -7841010454686207590}
   - component: {fileID: 7871986335983926290}
@@ -459,23 +458,6 @@ PolygonCollider2D:
       - {x: 0.19999999, y: -0.099999994}
       - {x: 0.099999994, y: 0.01}
   m_UseDelaunayMesh: 0
---- !u!114 &-4787458239212380267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7919206205677463345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc9334e6fcac18441906de8b699ed1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 0
-  currentHealth: 0
-  moveSpeed: 0
-  deathCoinReward: 0
-  isHidden: 0
 --- !u!114 &8138812636371190517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,7 +484,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 5925388108204834657}
-  currencyWorth: 50
 --- !u!114 &7871986335983926290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,10 +496,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3753bc8f4b8e443bfe97c66f0bf8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
-  currentHealth: 0
-  moveSpeed: 0
-  deathCoinReward: 0
+  maxHealth: 100
+  currentHealth: 100
+  moveSpeed: 1.5
+  deathCoinReward: 40
   isHidden: 0
 --- !u!114 &-5081556799977613124
 MonoBehaviour:

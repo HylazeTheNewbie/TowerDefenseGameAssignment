@@ -795,57 +795,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 693451729658598377, guid: 657b7ac83e0a5d542a574affc42162ea, type: 3}
   m_PrefabInstance: {fileID: 193794775}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &514339789
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 514339791}
-  - component: {fileID: 514339790}
-  m_Layer: 0
-  m_Name: EnemySpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &514339790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514339789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f96321462f03264fb80ebb29d74d236, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefabs:
-  - {fileID: 6629672071512676976, guid: ff68385a5d1386a44974f1af085fa0f2, type: 3}
-  baseEnemiesEquilvalent: 4
-  enemiesPerSec: 0.75
-  timeBetweenWaves: 1
-  difficultyScalingFactor: 0.5
-  isSpawning: 0
---- !u!4 &514339791
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514339789}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.68, y: 12.77, z: 5.4433546}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &526363157
 GameObject:
   m_ObjectHideFlags: 0
@@ -10402,6 +10351,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1401159163}
   - component: {fileID: 1401159165}
+  - component: {fileID: 1401159166}
+  - component: {fileID: 1401159167}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -10520,6 +10471,44 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1401159166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401159161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddaff77c2faf19a4288288fe1ad81791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxWave: 3
+  currentWave: 1
+  currentMoney: 300
+  lives: 15
+--- !u!114 &1401159167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401159161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f96321462f03264fb80ebb29d74d236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefabs:
+  - {fileID: 6629672071512676976, guid: ff68385a5d1386a44974f1af085fa0f2, type: 3}
+  baseEnemiesEquilvalent: 5
+  enemiesPerSec: 0.75
+  timeBetweenWaves: 1
+  difficultyScalingFactor: 0.5
+  timeSinceLastSpawn: 0
+  enemiesAlive: 0
+  enemiesLeftToSpawn: 0
+  isSpawning: 0
 --- !u!4 &1405748698 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 693451729658598377, guid: 657b7ac83e0a5d542a574affc42162ea, type: 3}
@@ -17393,9 +17382,8 @@ SceneRoots:
   - {fileID: 1413348941}
   - {fileID: 974547907}
   - {fileID: 2774749088114308426}
-  - {fileID: 1401159163}
   - {fileID: 1271221276}
-  - {fileID: 514339791}
   - {fileID: 1978553083}
   - {fileID: 1659373947}
   - {fileID: 1272252384}
+  - {fileID: 1401159163}

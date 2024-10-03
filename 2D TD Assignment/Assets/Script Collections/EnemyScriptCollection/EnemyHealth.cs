@@ -57,6 +57,7 @@ public class EnemyHealth : MonoBehaviour
     {
         ActionSets.OnEnemyKilled?.Invoke(_enemy);
         EnemySpawner.onEnemyDestroyed.Invoke();
+        LevelManager.main.IncreaseCurrency(_enemy.deathCoinReward);
         Destroy(gameObject);
     }
 }

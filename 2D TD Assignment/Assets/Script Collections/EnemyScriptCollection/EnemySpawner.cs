@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class EnemySpawner : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private GameObject[] enemyPrefabs;
+    [SerializeField] public GameObject[] enemyPrefabs;
 
     [Header("Attributes")]
     [SerializeField] private int baseEnemiesEquilvalent = 5;
@@ -18,10 +18,10 @@ public class EnemySpawner : MonoBehaviour
     public static UnityEvent onEnemyDestroyed = new UnityEvent();
 
     private int currentWave = 1;
-    private float timeSinceLastSpawn;
-    private int enemiesAlive;
-    private int enemiesLeftToSpawn;
-    [SerializeField] private bool isSpawning = false;
+    public float timeSinceLastSpawn;
+    public int enemiesAlive;
+    public int enemiesLeftToSpawn;
+    [SerializeField] public bool isSpawning = false;
 
     void Start()
     {
