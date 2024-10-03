@@ -55,7 +55,6 @@ public class EnemyHealth : MonoBehaviour
 
     public void Die()
     {
-        LevelManager.main.increaseCurrency(currencyWorth);
         ActionSets.OnEnemyKilled?.Invoke(_enemy);
     }
 }
