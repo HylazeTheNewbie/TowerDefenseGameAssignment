@@ -65,3 +65,6 @@ TagManager:
   - name: Entity
     uniqueID: 3503335053
     locked: 0
+  - name: Projectiles
+    uniqueID: 1221426263
+    locked: 0

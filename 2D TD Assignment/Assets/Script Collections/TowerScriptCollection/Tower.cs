@@ -1,66 +1,97 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    public Transform target;
+    [Header("Tower Attributes")]
+    public float fireRate;
+    private float fireCooldown = 0f;
     public float range;
     public bool hiddenDetection;
+    public float turnSpeed;
 
-    [HideInInspector] public List<Enemy> enemies;
-    [HideInInspector] public Enemy currentEnemyTarget;
+    [Header("References")]
+    public Transform target;
+    public Transform partToRotate;
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+
     // Start is called before the first frame update
     private void Start()
     {
-        InvokeRepeating("UpdateTarget", 0f, 0.25f);
+        InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
 
+    private void FixedUpdate()
+    {
+        if (target == null) return;
+
+        TowerRotation();
+        CalculateFireCooldown();
+    }
+
+    private void CalculateFireCooldown()
+    {
+        if (fireCooldown <= 0f)
+        {
+            Shoot();
+            fireCooldown = 1f / fireRate;
+        }
+
+        fireCooldown -= Time.deltaTime;
+    }
+
+    private void Shoot()
+    {
+        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+        if (bullet != null) { 
+            bullet.SeekTarget(target);
+        }
+    }
     private void UpdateTarget()
     {
+        Enemy[] enemies = GameObject.FindObjectsOfType<Enemy>(); 
+        List<Enemy> validTargets = new List<Enemy>();
+        float shortestDistance = Mathf.Infinity;
+        Enemy nearestEnemy = null;
 
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Enemy"))
+        foreach(Enemy enemy in enemies)
         {
-            Enemy newEnemy = other.GetComponent<Enemy>();
-
-            if (newEnemy.ReturnIsHiddenEnemy() == true && !hiddenDetection)
-                return;
-
-            enemies.Add(newEnemy);
+            if (enemy.ReturnIsHiddenEnemy() == true && !hiddenDetection)
+                continue;
+            else
+                validTargets.Add(enemy);
         }
-    }
-    
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Enemy") )
+
+        foreach(Enemy enemy in validTargets)
         {
-            Enemy enemy = other.GetComponent<Enemy>();
-            if (enemies.Contains(enemy))
+            float distanceToEnemy = Vector2.Distance(transform.position, enemy.transform.position);
+            
+            if (distanceToEnemy < shortestDistance)
             {
-                enemies.Remove(enemy);
+                shortestDistance = distanceToEnemy;
+                nearestEnemy = enemy;
             }
         }
+
+        if  (nearestEnemy != null && shortestDistance <= range)
+            target = nearestEnemy.transform;
+        else
+            target = null;
     }
 
-    void GetCurrentEnemyTarget()
+    private void TowerRotation()
     {
-        if (enemies.Count <= 0)
-        {
-            currentEnemyTarget = null;
-            return;
-        }
 
-        currentEnemyTarget = enemies[0];
-    }
-   void RotateTowards(GameObject target)
-    {
-        Vector3 direction = target.transform.position - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        Vector3 direction = target.position - partToRotate.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle - 90f));
+        partToRotate.rotation = Quaternion.RotateTowards(partToRotate.rotation, targetRotation, turnSpeed * Time.fixedDeltaTime);
     }
 
     private void OnDrawGizmosSelected()
